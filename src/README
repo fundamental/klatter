@@ -1,0 +1,52 @@
+Klatter - A Trivial Formant Based Phoneme Synthesizer
+=====================================================
+Mark McCurry
+
+Klatter is a bare bones formant synthesizer based upon the description given in
+the 1979 paper "Software For a Cascade/Parallel Formant Synthesizer" by Dennis
+Klatt.
+This program was not designed for interactive use, though there is code for some
+minimal midi control.
+In it's current state, it is enough of a curiosity that it will be preserved,
+though it may not see much if any use.
+
+Architecture
+------------
+
+Code is broken into three categories
+
+DSP::   Any code performing the actual synthesis
+Param:: Any code holding the parameters for synthesis and the speech model
+glue::  Code connecting the parameters and synthesis to the system output (JACK)
+
+
+./window
+./Param
+./Param/Formants.h
+./Param/Words.cpp
+./Param/Words.h
+./Param/Utterance.h
+./Param/Mapper.cpp
+./Param/State.h
+./Param/Mapper.h
+./Param/State.cpp
+./mapper.cpp
+./.README.swp
+./mapper.h
+./formants_old.h
+./main.cpp
+./window.h
+./audio.h
+./DSP
+./DSP/Formant.cpp
+./DSP/Formant.h
+./DSP/Util.h
+./DSP/Util.cpp
+./DSP/Source.h
+./DSP/Source.cpp
+./audio.cpp
+./mapper
+./window.cpp
+./klatter
+./Makefile
+
